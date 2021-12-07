@@ -1,82 +1,100 @@
-Abecedario = "0123456789ABCDEFGHIJKLMNÑOPQRSTUVWXYZabcdefghijklmnñopqrstuvwxyz"
-Abecedario = Abecedario.split('');
+function vernam(texto,clave){
+    Abecedario = "0123456789ABCDEFGHIJKLMNÑOPQRSTUVWXYZabcdefghijklmnñopqrstuvwxyz"
+    Abecedario = Abecedario.split('');
 
-Abecedario_binario = ["000000", "000001", "000010", "000011", "000100", "000101", "000110", "000111", "001000", "001001", "001010", "001011", "001100", "001101", "001110", "001111", "010000", "010001", "010010", "010011", "010100", "010101", "010110", "010111", "011000", "011001", "011010", "011011", "011100", "011101", "011110", "011111", "100000", "100001", "100010", "100011", "100100", "100101", "100110", "100111", "101000", "101001", "101010", "101011", "101100", "101101", "101110", "101111", "110000", "110001", "110010", "110011", "110100", "110101", "110110", "110111", "111000", "111001", "111010", "111011", "111100", "111101", "111110", "111111"];
+    Abecedario_binario = ["000000", "000001", "000010", "000011", "000100", "000101", "000110", "000111", "001000", "001001", "001010", "001011", "001100", "001101", "001110", "001111", "010000", "010001", "010010", "010011", "010100", "010101", "010110", "010111", "011000", "011001", "011010", "011011", "011100", "011101", "011110", "011111", "100000", "100001", "100010", "100011", "100100", "100101", "100110", "100111", "101000", "101001", "101010", "101011", "101100", "101101", "101110", "101111", "110000", "110001", "110010", "110011", "110100", "110101", "110110", "110111", "111000", "111001", "111010", "111011", "111100", "111101", "111110", "111111"];
 
-// console.log(Abecedario_binario.length)
-// console.log(Abecedario.length)
+    // console.log(Abecedario_binario.length)
+    // console.log(Abecedario.length)
 
-texto = "Alemania";
-texto = texto.split('');
+    texto = texto.split('');
 
-clave = "1pQw3F2m";
-clave = clave.split('');
+    clave = clave.split('');
 
-texto_binario = [];
+    texto_binario = [];
 
-for(i=0;i<texto.length;i++){
+    for(i=0;i<texto.length;i++){
 
-    for(k=0;k<=Abecedario.length;k++){
+        for(k=0;k<=Abecedario.length;k++){
 
-        if(texto[i] == Abecedario[k]){
-            texto_binario.push(Abecedario_binario[k])
-        }
-    }
-}
-
-clave_binario = [];
-
-for(i=0;i<clave.length;i++){
-
-    for(k=0;k<=Abecedario.length;k++){
-
-        if(clave[i] == Abecedario[k]){
-            clave_binario.push(Abecedario_binario[k])
-        }
-    }
-}
-
-// console.log(texto_binario)
-// console.log(clave_binario)
-
-
-binario_resul = '';
-cripto = [];
-
-for(i=0;i<texto_binario.length;i++){
-
-    texto_posi = texto_binario[i];
-    texto_posi = texto_posi.split('');
-
-    clave_posi = clave_binario[i];
-    clave_posi = clave_posi.split('');
-
-    for(k=0;k<texto_posi.length;k++){
-        if(texto_posi[k] == clave_posi[k]){
-            binario_resul = binario_resul + "0"
-        } else {
-            binario_resul = binario_resul + "1"
+            if(texto[i] == Abecedario[k]){
+                texto_binario.push(Abecedario_binario[k])
+            }
         }
     }
 
-    cripto.push(binario_resul);
+    clave_binario = [];
+
+    for(i=0;i<clave.length;i++){
+
+        for(k=0;k<=Abecedario.length;k++){
+
+            if(clave[i] == Abecedario[k]){
+                clave_binario.push(Abecedario_binario[k])
+            }
+        }
+    }
+
+    // console.log(texto_binario)
+    // console.log(clave_binario)
+
+
     binario_resul = '';
-}
+    cripto = [];
 
-// console.log(cripto);
+    for(i=0;i<texto_binario.length;i++){
 
-mensaje = [];
+        texto_posi = texto_binario[i];
+        texto_posi = texto_posi.split('');
 
-for(i=0;i<cripto.length;i++){
+        clave_posi = clave_binario[i];
+        clave_posi = clave_posi.split('');
 
-    for(k=0;k<Abecedario.length;k++){
+        for(k=0;k<texto_posi.length;k++){
+            if(texto_posi[k] == clave_posi[k]){
+                binario_resul = binario_resul + "0"
+            } else {
+                binario_resul = binario_resul + "1"
+            }
+        }
 
-        if(cripto[i] == Abecedario_binario[k]){
-            mensaje.push(Abecedario[k])
+        cripto.push(binario_resul);
+        binario_resul = '';
+    }
+
+    // console.log(cripto);
+
+    mensaje = [];
+
+    for(i=0;i<cripto.length;i++){
+
+        for(k=0;k<Abecedario.length;k++){
+
+            if(cripto[i] == Abecedario_binario[k]){
+                mensaje.push(Abecedario[k])
+            }
+
         }
 
     }
 
+    console.log(mensaje.join(''));
+    return mensaje.join('');
 }
 
-console.log(mensaje.join(''))
+// Ejemplo 1
+
+// texto = "Alemania";
+// clave = "1pQw3F2m";
+// vernam1 = vernam(texto,clave);
+
+// texto = "B5nDbxkK"
+// clave = "1pQw3F2m";
+// vernam2 = vernam(texto,clave);
+
+
+// Ejemplo 2
+
+texto = "st9CHYG"
+clave = "oK6vQB9";
+vernam3 = vernam(texto,clave);
