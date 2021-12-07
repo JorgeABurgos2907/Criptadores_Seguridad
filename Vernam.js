@@ -39,3 +39,44 @@ for(i=0;i<clave.length;i++){
 // console.log(texto_binario)
 // console.log(clave_binario)
 
+
+binario_resul = '';
+cripto = [];
+
+for(i=0;i<texto_binario.length;i++){
+
+    texto_posi = texto_binario[i];
+    texto_posi = texto_posi.split('');
+
+    clave_posi = clave_binario[i];
+    clave_posi = clave_posi.split('');
+
+    for(k=0;k<texto_posi.length;k++){
+        if(texto_posi[k] == clave_posi[k]){
+            binario_resul = binario_resul + "0"
+        } else {
+            binario_resul = binario_resul + "1"
+        }
+    }
+
+    cripto.push(binario_resul);
+    binario_resul = '';
+}
+
+// console.log(cripto);
+
+mensaje = [];
+
+for(i=0;i<cripto.length;i++){
+
+    for(k=0;k<Abecedario.length;k++){
+
+        if(cripto[i] == Abecedario_binario[k]){
+            mensaje.push(Abecedario[k])
+        }
+
+    }
+
+}
+
+console.log(mensaje.join(''))
