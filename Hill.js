@@ -36,3 +36,45 @@ const nAlpha = (alpha) => {
     });
     return obj;
 }
+
+const hill = (opt, m, k, n, alfabeto) => {
+
+    m = m.replace(/ /g, "");
+    m = m.toUpperCase();
+    const letrasMensaje = m.split('');
+
+    let matriz = [];
+    matriz[0] = [];
+    matriz[1] = [];
+    let j = 0;
+    for (let i = 0; i < letrasMensaje.length/2; i++) {
+        if(!letrasMensaje[j+1]) {
+            matriz[0][i] = alfabeto[letrasMensaje[j]];
+            matriz[1][i] = alfabeto['X'];
+        } else {
+            matriz[0][i] = alfabeto[letrasMensaje[j]];
+            matriz[1][i] = alfabeto[letrasMensaje[j+1]];
+        }
+        j = j+2;
+    }
+
+    console.log(matriz);
+    if(opt == 0) {
+        const adj = adjunto(2,k);
+        const mod = adj.map(x=>x.map(a => (a +n)%n));
+        const det = (math.det(k) + n) % n;
+        const detinv = math.xgcd(det,n)['_data'][1];
+        k = mod.map(x=>x.map(a => (a*detinv)%n));
+    }
+
+    const multiplicacion = (multiply(k, matriz));
+
+    const mod = multiplicacion.map(x=>x.map(a => (a)%n));
+
+    const msg = mod.map(x=>x.map(a=>getKeyByValue(alfabeto, a)));
+
+    const mensaje = transpose(msg).flat().join('');
+
+    return mensaje;
+
+}
