@@ -84,7 +84,7 @@ const alpha1 = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 const alfabeto = nAlpha(alpha);
 const alfabeto1 = nAlpha(alpha1);
 
-const m = 'SUPER BOWL';
+// const m = 'SUPER BOWL';
 
 const k = [[5, 11], [8, 15]];
 const m1 = 'KPTMWÑUQ';
