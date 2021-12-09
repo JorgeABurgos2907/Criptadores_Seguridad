@@ -71,3 +71,86 @@ for(i=0;i<mensaje.length;i++){
 }
 
 console.log(mensaDos)
+//cripto
+
+for(i=0;i<mensaDos.length;i++){
+    texto_posi = mensaDos[i];
+    texto_posi = texto_posi.split('');
+
+    i_pri = 0;
+    j_pri = 0;
+
+    i_segu = 0;
+    j_segu = 0;
+
+    m = 0;
+    n = 0;
+
+    resul = '';
+
+    for(j=0;j<Abecedario_clave.length;j++){
+
+        if(texto_posi[0] == Abecedario_clave[j]){
+            i_pri = m;
+            j_pri = n;
+        }
+
+        m = m + 1;
+        if(m == 5){
+            n = n + 1;
+            m = 0
+        }
+
+    }
+
+    m = 0;
+    n = 0;
+
+    for(j=0;j<Abecedario_clave.length;j++){
+
+
+        if(texto_posi[1] == Abecedario_clave[j]){
+            i_segu = m;
+            j_segu = n;
+        }
+
+        m = m + 1;
+        if(m == 5){
+            n = n + 1;
+            m = 0
+        }
+    }
+
+    posi_uno = 0;
+    posi_dos = 0;
+
+    if(j_pri == j_segu){
+        posi_uno = j_pri + 1;
+        posi_dos = j_segu + 1;
+        if(posi_uno>5){
+            posi_uno = 0;
+        }
+        if(posi_dos>5){
+            posi_dos = 0;
+        }
+
+        resul = matrix[posi_uno][i_pri] + matrix[posi_dos][i_segu]
+
+    } else if(i_pri == i_segu){
+
+        posi_uno = j_pri + 1;
+        posi_dos = j_segu + 1;
+        if(posi_uno>5){
+            posi_uno = 0;
+        }
+        if(posi_dos>5){
+            posi_dos = 0;
+        }
+
+        resul = matrix[posi_uno][i_pri] + matrix[posi_dos][i_segu]
+
+    }
+    
+
+
+}
