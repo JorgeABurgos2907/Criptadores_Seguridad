@@ -78,3 +78,19 @@ const hill = (opt, m, k, n, alfabeto) => {
     return mensaje;
 
 }
+
+const alpha = 'ABCDEFGHIJKLMNÑOPQRSTUVWXYZ';
+const alpha1 = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+const alfabeto = nAlpha(alpha);
+const alfabeto1 = nAlpha(alpha1);
+
+const m = 'SUPER BOWL';
+
+const k = [[5, 11], [8, 15]];
+const m1 = 'KPTMWÑUQ';
+console.log(hill(0, m1, k, 27, alfabeto));
+
+
+const k1 = [[3, 3], [2, 5]];
+const m2 = 'HIAT';
+console.log(hill(0, m2, k1, 26, alfabeto1));
