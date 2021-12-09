@@ -36,6 +36,7 @@ for(i=0;i<Abecedario_clave.length;i++){
 console.table(matrix)
 
 mensaje = "WITH A LITTLE HELP FROM MY FRIENDS";
+mensaje = mensaje.replaceAll("J","I")
 mensaje = mensaje.replaceAll(" ","")
 mensaje = mensaje.split('');
 
@@ -72,6 +73,8 @@ for(i=0;i<mensaje.length;i++){
 
 console.log(mensaDos)
 //cripto
+
+texto_cripto = [];
 
 for(i=0;i<mensaDos.length;i++){
     texto_posi = mensaDos[i];
@@ -124,33 +127,40 @@ for(i=0;i<mensaDos.length;i++){
     posi_uno = 0;
     posi_dos = 0;
 
-    if(j_pri == j_segu){
+    if(i_pri == i_segu){
         posi_uno = j_pri + 1;
         posi_dos = j_segu + 1;
-        if(posi_uno>5){
+
+        if(posi_uno>=5){
             posi_uno = 0;
         }
-        if(posi_dos>5){
+        if(posi_dos>=5){
             posi_dos = 0;
         }
 
         resul = matrix[posi_uno][i_pri] + matrix[posi_dos][i_segu]
 
-    } else if(i_pri == i_segu){
+    } else if(j_pri == j_segu){
 
-        posi_uno = j_pri + 1;
-        posi_dos = j_segu + 1;
-        if(posi_uno>5){
+        posi_uno = i_pri + 1;
+        posi_dos = i_segu + 1;
+        if(posi_uno>=5){
             posi_uno = 0;
         }
-        if(posi_dos>5){
+        if(posi_dos>=5){
             posi_dos = 0;
         }
 
-        resul = matrix[posi_uno][i_pri] + matrix[posi_dos][i_segu]
+        resul = matrix[j_pri][posi_uno] + matrix[j_segu][posi_dos]
+    
+    } else {
+
+        resul = matrix[j_pri][i_segu] + matrix[j_segu][i_pri]
 
     }
+
+    texto_cripto.push(resul);
     
-
-
 }
+
+console.log(texto_cripto)
