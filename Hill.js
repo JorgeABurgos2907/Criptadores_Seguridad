@@ -24,3 +24,15 @@ const transpose = (arr) => {
         });
     });
 }
+
+const getKeyByValue = (object, value) => {
+    return Object.keys(object).find(key => object[key] === value);
+}
+
+const nAlpha = (alpha) => {
+    let obj = {};
+    alpha.split("").forEach(function(el, i) {
+        obj[el] = i;
+    });
+    return obj;
+}
