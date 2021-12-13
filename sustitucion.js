@@ -114,6 +114,8 @@ function sustitucion(texto_cripto,opc,metodo){
     }
 
     if(metodo == 1){
+        // a = 16;
+        // b = 2;
         ci = 0;
         texto_resuelto = '';
         
@@ -160,8 +162,8 @@ function sustitucion(texto_cripto,opc,metodo){
     }
     else if(metodo == 3) {
         mi = 0;
-        a = 8;
-        b = 4;
+        a = 16;
+        b = 2;
         texto_encriptado = '';
         
         for(i = 0; i < texto_cripto_arreglo.length; i++){
@@ -216,6 +218,12 @@ function nuevo_abecedario(b,a){
 // texto_cripto3 = "PARAESCRIBIRNOHAYQUESERCOHERENTENITENERRAZONNIDEJARDETENERLABASTACONCONTARLOQUESIENTEELALMAOUNAHISTORIAFANTASTICAQUEDELEITESUEÑOSAJENOSOTALVEZCREERLOQUENUNCAFUE";
 // susti3 = sustitucion(texto_cripto3,1,3);
 
-texto_cripto31 = "XENEJUTNÑMÑNAPGEOFKJUJNTPGJNJACJAÑCJAJNNEWPAAÑBJVENBJCJAJNLEMEUCETPATPACENLPFKJUÑJACJJLELSEPKAEGÑUCPNÑEQEACEUCÑTEFKJBJLJÑCJUKJIPUEVJAPUPCELRJWTNJJNLPFKJAKATEQKJ";
-susti4 = sustitucion(texto_cripto31,2,1);
-nuevo_abc2 = nuevo_abecedario(4,8);
+// texto_cripto31 = "XENEJUTNÑMÑNAPGEOFKJUJNTPGJNJACJAÑCJAJNNEWPAAÑBJVENBJCJAJNLEMEUCETPATPACENLPFKJUÑJACJJLELSEPKAEGÑUCPNÑEQEACEUCÑTEFKJBJLJÑCJUKJIPUEVJAPUPCELRJWTNJJNLPFKJAKATEQKJ";
+// susti4 = sustitucion(texto_cripto31,2,1);
+// nuevo_abc2 = nuevo_abecedario(4,8);
+
+// PARCIAL
+
+texto_cripto5 = "ÑUCYC HCUYM RÑJHC MIYTC MTVUB ZTFCH VZUHZ FZMPJ ZBYSC TMÑYV PVNCW ZDMTJ VZUMJ WMPJV JYMFC ZOMTC YVDZP CVUBT CMJYT ÑHYÑT CMUPC TMWTZ ÑYMTJ XHZUY TCBÑM QZJ"
+susti2 = sustitucion(texto_cripto5,1,1);
+nuevo_abc2 = nuevo_abecedario(2,16);

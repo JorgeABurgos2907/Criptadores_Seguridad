@@ -94,3 +94,7 @@ console.log(hill(0, m1, k, 27, alfabeto));
 const k1 = [[3, 3], [2, 5]];
 const m2 = 'HIAT';
 console.log(hill(0, m2, k1, 26, alfabeto1));
+
+const k2 = [[16,2],[8,0]];
+const m3 = "UNATACANTEBUSCAEXTRAERINFORMACIONCOMOELSOFTWAREUTILIZADOVERSIONESDELSISTEMAOPERATIVOLAINFRAESTRUCTURAENLAREDROUTERSYCONTRAFUEGOS"
+console.log(hill(1, m3, k2, 27, alfabeto));

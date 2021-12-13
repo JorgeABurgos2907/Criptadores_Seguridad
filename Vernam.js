@@ -95,6 +95,17 @@ function vernam(texto,clave){
 
 // Ejemplo 2
 
-texto = "st9CHYG"
-clave = "oK6vQB9";
-vernam3 = vernam(texto,clave);
+// texto = "st9CHYG"
+// clave = "oK6vQB9";
+// vernam3 = vernam(texto,clave);
+
+//PARCIAL
+
+texto = "JorgeAndresBurgosFuentes"
+clave = "LaSeguridadInformatica29"
+console.log(texto.length)
+console.log(clave.length)
+vernam4 = vernam(texto,clave);
+
+texto = "6Hf22l55UCGO8SU39f34LRgm"
+vernam4 = vernam(texto,clave);

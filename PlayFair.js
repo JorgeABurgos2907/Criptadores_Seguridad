@@ -213,37 +213,50 @@ function Playfair(clave,mensaje,metodo,Abecedario) {
     return texto_cripto.join('');
 }
 
-Abecedario = "ABCDEFGHIKLMNOPQRSTUVWXYZ"
-clave = "BEATLES";
-mensaje = "WITH A LITTLE HELP FROM MY FRIENDS";
-metodo = 1;
-playfair = Playfair(clave,mensaje,metodo,Abecedario)
+// Abecedario = "ABCDEFGHIKLMNOPQRSTUVWXYZ"
+// clave = "BEATLES";
+// mensaje = "WITH A LITTLE HELP FROM MY FRIENDS";
+// metodo = 1;
+// playfair = Playfair(clave,mensaje,metodo,Abecedario)
 
 
-Abecedario = "ABCDEFGHIKLMNOPQRSTUVWXYZ"
-clave = "BEATLES";
-mensaje = "EPBMTBMELBBIABRCUPKYRTMYPCKGDV";
-metodo = 2;
-playfair2 = Playfair(clave,mensaje,metodo,Abecedario)
+// Abecedario = "ABCDEFGHIKLMNOPQRSTUVWXYZ"
+// clave = "BEATLES";
+// mensaje = "EPBMTBMELBBIABRCUPKYRTMYPCKGDV";
+// metodo = 2;
+// playfair2 = Playfair(clave,mensaje,metodo,Abecedario)
 
 
-Abecedario = "ABCDEFGHIJLMNOPQRSTUVWXYZ"
-clave = "BEATLES";
-mensaje = "EC TB AZ EN WB JH TX AB BU VC LO JT PM IL";
-metodo = 2;
-playfair3 = Playfair(clave,mensaje,metodo,Abecedario)
+// Abecedario = "ABCDEFGHIJLMNOPQRSTUVWXYZ"
+// clave = "BEATLES";
+// mensaje = "EC TB AZ EN WB JH TX AB BU VC LO JT PM IL";
+// metodo = 2;
+// playfair3 = Playfair(clave,mensaje,metodo,Abecedario)
 
 
-Abecedario = "ABCDEFGHIJLMNOPQRSTUVWXYZ"
-clave = "MIEDO";
-mensaje = "Las sombras llaman a la puerta del castillo hoy";
-mensaje = mensaje.toUpperCase();
-metodo = 1;
-playfair4 = Playfair(clave,mensaje,metodo,Abecedario)
+// Abecedario = "ABCDEFGHIJLMNOPQRSTUVWXYZ"
+// clave = "MIEDO";
+// mensaje = "Las sombras llaman a la puerta del castillo hoy";
+// mensaje = mensaje.toUpperCase();
+// metodo = 1;
+// playfair4 = Playfair(clave,mensaje,metodo,Abecedario)
 
 
-Abecedario = "ABCDEFGHIJLMNOPQRSTUVWXYZ"
-clave = "MIEDO";
-mensaje = "HCXEUEIAQBXSHCAHHFHCUZISQFODSLCQRDSEPEPMZY";
-metodo = 2;
+// Abecedario = "ABCDEFGHIJLMNOPQRSTUVWXYZ"
+// clave = "MIEDO";
+// mensaje = "HCXEUEIAQBXSHCAHHFHCUZISQFODSLCQRDSEPEPMZY";
+// metodo = 2;
+// playfair5 = Playfair(clave,mensaje,metodo,Abecedario)
+
+// PARCIAL
+
+mensaje = "OBSGVHGSOBQG USOIGCGEIXGEQPSEBYRG ISJQJDBCFCDABASKVHOIDVI XCHHRD JLBGSE GHDUD CGOBSGVHGSQANPUNEMGCDVQ JMUQGKCNSGIHD UQXACGI OIDP OHDPEOIODGSJADVGSJCMDHDUNVHSDVMDHDRBGQZBSGSRHEOBGGH"
+clave = "SEGURIDAD"
+metodo = 2
+Abecedario = "ABCDEFGHIJKLMNOPQRSTUVXYZ"
+console.log(Abecedario.length)
+playfair5 = Playfair(clave,mensaje,metodo,Abecedario)
+
+mensaje = "EVOHKQNGOGNTCEFOOGOPPEOGO DZGOCEASHTQEGOFODHT NGRFEBQAJG EFBI EQFHRFEPXOAUPF ENRNRNPIGNPOCEDQPT ODZVBNNGFBGAQEOHKQN GTPSHAP ZFNRUIOGEFBIEQFHRFEPBOCEYOOYPQNGTPBEYM"
+clave = "ENERGIA"
 playfair5 = Playfair(clave,mensaje,metodo,Abecedario)

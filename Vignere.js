@@ -216,3 +216,8 @@ function vigenere_autoclave(texto_cripto,k,metodo){
 // k = "TECNOLOGIA"
 // vigenere1 = vigenere_autoclave(texto_cripto3,k,2);
 
+// Parcial
+
+texto_cripto = "PCLIK OHSGJ CXXDN VITTM ÑAUFM WCGAU WMMYJ UTBLT XDDGV CTXDS RLPFY UOUXZ XLXIG LMVJP OEXZE UDNCN WFCDD GÑUTÑ DQWX"
+k = "ACTITUD"
+vigenere1 = vigenere(texto_cripto,k,1)
