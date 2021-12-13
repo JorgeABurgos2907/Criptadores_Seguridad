@@ -33,7 +33,7 @@ function Playfair(clave,mensaje,metodo,Abecedario) {
     
     }
     
-    // console.table(matrix)
+    console.table(matrix)
     
     // mensaje = mensaje.replaceAll("J","I")
     mensaje = mensaje.replaceAll(" ","")
@@ -70,7 +70,7 @@ function Playfair(clave,mensaje,metodo,Abecedario) {
     
     }
     
-    // console.log(mensaDos)
+    console.log(mensaDos)
 
     
     
@@ -198,7 +198,8 @@ function Playfair(clave,mensaje,metodo,Abecedario) {
             
             } else {
     
-                resul = matrix[j_pri][i_segu] + matrix[j_segu][i_pri]
+                // resul = matrix[j_pri][i_segu] + matrix[j_segu][i_pri]
+                resul = matrix[j_segu][i_pri] + matrix[j_pri][i_segu] 
     
             }
     
@@ -208,7 +209,7 @@ function Playfair(clave,mensaje,metodo,Abecedario) {
     
     }
     
-    // console.log(texto_cripto)
+    console.log(texto_cripto)
     console.log(texto_cripto.join(''))
     return texto_cripto.join('');
 }
@@ -257,6 +258,6 @@ Abecedario = "ABCDEFGHIJKLMNOPQRSTUVXYZ"
 console.log(Abecedario.length)
 playfair5 = Playfair(clave,mensaje,metodo,Abecedario)
 
-mensaje = "EVOHKQNGOGNTCEFOOGOPPEOGO DZGOCEASHTQEGOFODHT NGRFEBQAJG EFBI EQFHRFEPXOAUPF ENRNRNPIGNPOCEDQPT ODZVBNNGFBGAQEOHKQN GTPSHAP ZFNRUIOGEFBIEQFHRFEPBOCEYOOYPQNGTPBEYM"
-clave = "ENERGIA"
-playfair5 = Playfair(clave,mensaje,metodo,Abecedario)
+// mensaje = "EVOHKQNGOGNTCEFOOGOPPEOGO DZGOCEASHTQEGOFODHT NGRFEBQAJG EFBI EQFHRFEPXOAUPF ENRNRNPIGNPOCEDQPT ODZVBNNGFBGAQEOHKQN GTPSHAP ZFNRUIOGEFBIEQFHRFEPBOCEYOOYPQNGTPBEYM"
+// clave = "ENERGIA"
+// playfair5 = Playfair(clave,mensaje,metodo,Abecedario)
